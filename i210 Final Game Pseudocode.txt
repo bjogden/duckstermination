@@ -1,0 +1,53 @@
+Bryce Ogden
+Final Game Pseudocode
+
+Duckstermination!
+
+Goal: create a game similar to Duck Hunt with a twist of having a gun at the bottom of
+the screen that the user controls and rotates with the left and right arrow keys. The 
+gun will fire bullets when the spacebar is pressed. However, the gun only has 15 bullets. 
+Once a bullet collides with a duck that flys onto the screen, the duck is destroyed, and 
+the player gains 50 points. Once a player exceeds 500 points, they receive 30 bullets and
+are able to fire twice as fast. Once the player gets to 1000 points, the background 
+changes, and 30 more bullets are given. Once the player gets to 2000 points, they win.
+If the player runs out of bullets, they lose.
+
+import math, random
+from livewires import games, color
+
+define screen properties:
+games.init(screen_width = 900, screen_height = 600, fps = 50)
+
+Create Wrap class
+	the Duck wraps around the screen until shot down
+
+Create Collide class
+	this is used for when the Bullet touches the Duck
+
+Create Duck class
+	Duck will fly across screen, horizontally and wrap around until dead
+
+Create Gun class
+	Gun fires Bullet
+	Gun rotates when left and right arrow keys are pressed
+	Gun shoots Bullet when spacebar is pressed
+
+Create Bullet class
+	When Bullet collides with Duck, both are destroyed
+	
+(Maybe insert Explosion animation)
+
+Create Game class
+	game begins
+	show score
+	play Duck sounds
+	play Gun sound when Bullet is shot
+	set background
+	game ends and displays 'game over'
+	
+Def main():
+	duckstermination = Game()
+	duckstermination.play()
+	
+# play!
+main()
